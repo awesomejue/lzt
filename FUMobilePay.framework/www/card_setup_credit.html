@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<!--    <meta charset="UTF-8">-->
+<!--    <title>设置银行卡</title>-->
+<!--    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0,user-scalable=no, width=device-width";charset=utf-8 >-->
+<!--    <meta name="format-detection" content="telephone=no" />-->
+<!--    <meta name="format-detection" content="email=no" />-->
+<!--    <link type="text/css" rel="stylesheet" href="css/style.css">-->
+<!--    <style>-->
+<!--    #card_setup_form{width:90% !important; margin-left: auto; margin-right: auto;}-->
+<!--       input[type="text"]{width:99% !important; margin-left: auto; margin-right: auto;}-->
+<!--    -->
+<!--    </style>-->
+
+
+    <meta http-equiv="Content-type" content="text/html;charset=utf-8" >
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0,user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="email=no">
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/common.css" />
+    <title>银行卡信息</title>
+    
+</head>
+<body>
+    
+    <header class="sj_header">
+        <a href="javascript:;" onClick="javascript:window.fypay.giveUpPay();" class="sj_back"><img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" /></a>
+        <h2 class="sj_logo"><span></span></h2>
+    </header>
+    <section class="sj_concent">
+        <article class="sj_information">
+            <ul>
+                <li>
+                    <label>金额</label>
+                    <span><input id="order_amt" disabled="true" type="number" class="sj_whiteinp" value="" name="b_card" placeholder="金额" /><i class="del_i"></i></span>
+                </li>
+                <li>
+                    <label>卡号</label>
+                    <span><input id="card_no" disabled="true" type="number" class="sj_whiteinp" value="" name="b_card" placeholder="请输入银行卡卡号" /><i class="del_i"></i></span>
+                </li>
+                <li>
+                    <label>银行</label>
+                    <span><input id="card_type" disabled="true" type="type" class="sj_whiteinp" value=""  placeholder="请输入银行名称" /><i class="del_i"></i></span>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <label>CVV2</label>
+                    <span><input id="card_cvn" type="number" class="sj_whiteinp" value="" maxlength="3" placeholder="请输入卡背面数字后三位" /></span>
+                </li>
+                <li>
+                    <label>有效期</label>
+                    <span><input id="card_date" maxlength="4" type="number" class="sj_whiteinp" value="" placeholder="月份年份(0916)" /></span>
+                </li>
+                <li>
+                    <label>手机号</label>
+                    <span><input id="mobile_no"  class="sj_whiteinp" value="" maxlength="11" placeholder="请输入银行预留手机号" /></span>
+                </li>
+                <li>
+                    <label>验证码</label>
+                    <span><input id="input_vcode" type="number" class="sj_whiteinp" style="width:60%;" value="" maxlength="4" placeholder="请输入短信验证码" /><button id="btn_vcode" class="sj_yzmbtn">获取验证码</button></span>
+                </li>
+            </ul>
+            <p class="sj_sevxy">
+            <input type="checkbox"  value="" id="checklab" /><span>同意<a href="./agreement_book.html">《支付服务协议》</a></span>
+            </p>
+            <div class="sj_botbtn"><button id=submit_btn class="btn_oranbtn" name="paybtn">确认支付</button></div>
+            
+        </article>
+    </section>
+    
+    
+    
+    
+<!--    <div class="content">-->
+<!--        <div id="card_setup_form">-->
+<!--            -->
+<!--            <input id="card_cvn" class="margin-top-small" type="text"  name="card_cvn" placeholder="CVN" value = '' maxlength="3" readonly/>-->
+<!--            <label style="line-height:40px; float:left; margin-top: 20px; margin-right:10px;">卡片有效期:</label>-->
+<!--            <input id="card_date" style=" float:left; width:87%; " class="margin-top-small" type="month" value = ""  min="2014-12" max="2029-12" name="card_date" placeholder="有效期" maxlength="4"/>-->
+<!--            <input id="id_card_no" class="margin-top-small"  type="text" name="id_card_no" value = '' placeholder="持卡人身份证号" maxlength="18" readonly/>-->
+<!--            <input id="user_name" class="margin-top-small" type="text"  name="user_name" value = '' placeholder="持卡人姓名" maxlength="20"/>-->
+<!--            <input id="mobile_no" class="margin-top-small" type="text"  name="mobile_no" value = '' placeholder="银行预留手机号" maxlength="11" readonly/>-->
+<!--            <div><input type="checkbox" style="height: 20px;  position: relative; top: 2px; width: 20px;; " name="checkbox1" value="checkbox" id="checkbox1">-->
+<!--            <label style="line-height:30px">已阅读并同意</label>-->
+<!---->
+<!--            <a href="./agreement_book.html"><u>《富友手机支付网关服务协议》</u></a></div>-->
+<!---->
+<!--            <button class="button normal margin-top-normal" id="submit_btn">下一步</button>-->
+<!--            </div>-->
+<!---->
+<!--    </div>-->
+    <div id="loading"></div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/xml2json.js"></script>
+<script src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/pay.js"></script>
+<script type="text/javascript">
+
+
+document.addEventListener("deviceready",function(){
+                          window.fypay.getOrderBaseInfo("loadOrderBaseInfoSuccess");
+                          $("#mobile_no").on("click",function(){
+                                        
+                                             
+                                             
+                                    keyDown.inputClick('$("#mobile_no").val')});
+<!--                          $("#card_cvn").on("click",function(){ keyDown.inputClick('$("#card_cvn").val')});-->
+<!--                          $("#card_date").on("click",function(){ keyDown.inputClick('$("#card_date").val')});-->
+                          
+                          $("#submit_btn").on("click",function(){
+                                              if($('#checkbox1').is(':checked')) {
+                                              bindCard.bindDebitCard();
+                                              
+                                              }else{
+                                              payOrder.payWithBankCard();
+                                              <!--       window.fypay.showAlert("请同意支付协议");-->
+                                              
+                                              }
+                                              });
+                          $("#btn_vcode").on("click",function(){
+                                             sendSms($("#mobile_no").val()) ;
+                                             });
+                          
+                          
+                          },false);
+
+
+
+<!--    $(function(){-->
+<!--      -->
+<!--    $("#card_type").val($.urlParam('cardNm'));-->
+<!--    $("#card_no").val($.urlParam('cardNo'));-->
+<!---->
+<!--<!--$("#card_type").val("中信银行信用卡中心");-->-->
+<!--<!--$("#card_no").val("6226890015441909");-->-->
+<!---->
+<!---->
+<!--       $("#bst").val($.urlParam('bst'));//CLPP-->
+<!---->
+<!--      -->
+<!--      $("#id_card_no").on("click",function(){ keyDown.inputClick('$("#id_card_no").val')});-->
+<!--      $("#mobile_no").on("click",function(){ keyDown.inputClick('$("#mobile_no").val')});-->
+<!--     $("#card_cvn").on("click",function(){ keyDown.inputClick('$("#card_cvn").val')});-->
+<!--        //输出值-->
+<!--        -->
+<!--        -->
+<!--        -->
+<!--        -->
+<!--        console.log($.urlParam('bst'));-->
+<!--      -->
+<!--        bindCard.bindCardPageInit();-->
+<!--<!--        $("#submit_btn").on("click",function(){-->-->
+<!--<!--            bindCard.bindCreditCard();//chenadd-->-->
+<!--<!--        });-->-->
+<!---->
+<!--$("#submit_btn").on("click",function(){-->
+<!--if($('#checkbox1').is(':checked')) {-->
+<!--bindCard.bindCreditCard();-->
+<!--<!--alert("进入下一步")-->-->
+<!---->
+<!--}else{-->
+<!--window.fypay.showAlert("请同意支付协议");-->
+<!---->
+<!--<!--alert("请同意支付协议");-->-->
+<!--}-->
+<!---->
+<!--});-->
+<!---->
+<!---->
+<!--    });-->
+</script>
+</body>
+</html>

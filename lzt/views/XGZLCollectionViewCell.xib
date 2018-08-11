@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2304" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="XGZLCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="166" height="135"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="166" height="135"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="data_one" translatesAutoresizingMaskIntoConstraints="NO" id="087-PW-Rd4">
+                        <rect key="frame" x="0.0" y="0.0" width="166" height="135"/>
+                        <color key="backgroundColor" red="0.99019607840000001" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="087-PW-Rd4" secondAttribute="bottom" id="2Pt-xT-NkZ"/>
+                <constraint firstItem="087-PW-Rd4" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="REc-54-FjR"/>
+                <constraint firstItem="087-PW-Rd4" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XXo-lT-vBZ"/>
+                <constraint firstAttribute="trailing" secondItem="087-PW-Rd4" secondAttribute="trailing" id="kNa-EA-7Gi"/>
+            </constraints>
+            <size key="customSize" width="166" height="135"/>
+            <connections>
+                <outlet property="imageVIEW" destination="087-PW-Rd4" id="jSo-vB-HQD"/>
+            </connections>
+            <point key="canvasLocation" x="-153" y="1"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="data_one" width="357" height="254"/>
+    </resources>
+</document>

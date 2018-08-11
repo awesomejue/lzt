@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="PingFang.ttc">
+            <string>PingFangSC-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Project Controller-->
+        <scene sceneID="ybo-Dl-cW3">
+            <objects>
+                <viewController restorationIdentifier="ProjectController" storyboardIdentifier="ProjectController" id="hpp-eE-ao3" customClass="ProjectController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WfS-IJ-NKa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="imK-vu-ne7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.94901973009999996" green="0.94901961089999998" blue="0.94901961089999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nAf-Ja-4r5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nti-MH-I5P">
+                                        <rect key="frame" x="168.5" y="30" width="38" height="27"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bDF-u6-KDz">
+                                        <rect key="frame" x="325" y="18.5" width="50" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="bDF-u6-KDz" secondAttribute="height" multiplier="1:1" id="Nhk-i1-t0G"/>
+                                            <constraint firstAttribute="width" constant="50" id="SSD-Eh-Zem"/>
+                                        </constraints>
+                                        <state key="normal" image="投资排行榜"/>
+                                        <connections>
+                                            <action selector="projectRankBtnClicked:" destination="hpp-eE-ao3" eventType="touchUpInside" id="MYa-k3-132"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="bDF-u6-KDz" firstAttribute="centerY" secondItem="nti-MH-I5P" secondAttribute="centerY" id="LLe-Mg-LEu"/>
+                                    <constraint firstAttribute="height" constant="64" id="c3B-Wo-uWJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="bDF-u6-KDz" secondAttribute="trailing" id="dMx-HL-LO8"/>
+                                    <constraint firstItem="nti-MH-I5P" firstAttribute="centerX" secondItem="nAf-Ja-4r5" secondAttribute="centerX" id="l1C-iJ-AFQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="nti-MH-I5P" secondAttribute="bottom" constant="7" id="rvA-kI-cTM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="imK-vu-ne7" firstAttribute="leading" secondItem="v1s-DQ-qBj" secondAttribute="leading" id="2YU-AS-Rlk"/>
+                            <constraint firstItem="nAf-Ja-4r5" firstAttribute="leading" secondItem="v1s-DQ-qBj" secondAttribute="leading" id="8np-b7-6Lg"/>
+                            <constraint firstItem="v1s-DQ-qBj" firstAttribute="trailing" secondItem="imK-vu-ne7" secondAttribute="trailing" id="BLB-UW-8qa"/>
+                            <constraint firstItem="v1s-DQ-qBj" firstAttribute="bottom" secondItem="imK-vu-ne7" secondAttribute="bottom" id="PAd-A2-97A"/>
+                            <constraint firstItem="nAf-Ja-4r5" firstAttribute="trailing" secondItem="v1s-DQ-qBj" secondAttribute="trailing" id="Qmv-Av-kyH"/>
+                            <constraint firstItem="imK-vu-ne7" firstAttribute="top" secondItem="nAf-Ja-4r5" secondAttribute="bottom" id="WDH-q1-0Zd"/>
+                            <constraint firstItem="nAf-Ja-4r5" firstAttribute="top" secondItem="WfS-IJ-NKa" secondAttribute="top" id="p0Y-CQ-AXi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v1s-DQ-qBj"/>
+                    </view>
+                    <connections>
+                        <outlet property="NavHeight" destination="c3B-Wo-uWJ" id="9iq-dh-ZhI"/>
+                        <outlet property="bottomLayout" destination="PAd-A2-97A" id="RFm-FO-jSq"/>
+                        <outlet property="tableView" destination="imK-vu-ne7" id="sm7-Ld-XUf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qp1-dH-yMk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="JjO-NK-QKP">
+                    <connections>
+                        <action selector="rankTouched:" destination="hpp-eE-ao3" id="YlX-qQ-Uni"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1948" y="-163"/>
+        </scene>
+        <!--Rank View Controller-->
+        <scene sceneID="d8J-8H-qgh">
+            <objects>
+                <viewController restorationIdentifier="RankViewController" storyboardIdentifier="RankViewController" id="K8Y-nE-F3G" customClass="RankViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xqo-xe-dPf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="投资排行榜" translatesAutoresizingMaskIntoConstraints="NO" id="T1M-ql-k2R">
+                                <rect key="frame" x="355" y="541.5" width="20" height="16"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="myU-B7-8JQ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="投资排行榜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z7V-Fu-tzC">
+                                        <rect key="frame" x="140.5" y="30" width="95" height="27"/>
+                                        <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1b3-MC-Xyl">
+                                        <rect key="frame" x="0.0" y="12" width="64" height="64"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="1b3-MC-Xyl" secondAttribute="height" multiplier="1:1" id="0lT-oL-OTF"/>
+                                        </constraints>
+                                        <state key="normal" image="ico_back"/>
+                                        <connections>
+                                            <action selector="back:" destination="K8Y-nE-F3G" eventType="touchUpInside" id="Tuo-qu-2Tr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="z7V-Fu-tzC" secondAttribute="bottom" constant="7" id="AeL-YG-PGS"/>
+                                    <constraint firstAttribute="height" constant="64" id="G8i-dy-ry7"/>
+                                    <constraint firstItem="1b3-MC-Xyl" firstAttribute="centerY" secondItem="z7V-Fu-tzC" secondAttribute="centerY" id="GIa-Hk-n57"/>
+                                    <constraint firstItem="1b3-MC-Xyl" firstAttribute="leading" secondItem="myU-B7-8JQ" secondAttribute="leading" id="O5j-2x-xfs"/>
+                                    <constraint firstItem="1b3-MC-Xyl" firstAttribute="height" secondItem="myU-B7-8JQ" secondAttribute="height" id="jeS-Fl-4k4"/>
+                                    <constraint firstItem="z7V-Fu-tzC" firstAttribute="centerX" secondItem="myU-B7-8JQ" secondAttribute="centerX" id="mVm-br-P8s"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="myU-B7-8JQ" firstAttribute="leading" secondItem="xPi-zW-KJp" secondAttribute="leading" id="2CM-aQ-EFU"/>
+                            <constraint firstItem="T1M-ql-k2R" firstAttribute="centerY" secondItem="xPi-zW-KJp" secondAttribute="centerY" multiplier="1.6" id="c2g-aK-a86"/>
+                            <constraint firstItem="myU-B7-8JQ" firstAttribute="trailing" secondItem="xPi-zW-KJp" secondAttribute="trailing" id="fNr-3f-4Dw"/>
+                            <constraint firstItem="myU-B7-8JQ" firstAttribute="top" secondItem="Xqo-xe-dPf" secondAttribute="top" id="uAe-aN-Y16"/>
+                            <constraint firstItem="xPi-zW-KJp" firstAttribute="trailing" secondItem="T1M-ql-k2R" secondAttribute="trailing" id="xUp-pv-ANQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xPi-zW-KJp"/>
+                    </view>
+                    <connections>
+                        <outlet property="NaviHeight" destination="G8i-dy-ry7" id="wdD-Z7-S3y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d1C-vE-pTd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1286" y="-163"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ico_back" width="10" height="20"/>
+        <image name="投资排行榜" width="20" height="16"/>
+    </resources>
+</document>

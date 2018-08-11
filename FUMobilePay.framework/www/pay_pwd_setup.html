@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+            <title>设置银行卡</title>
+            <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0,user-scalable=no, width=device-width">
+                <meta name="format-detection" content="telephone=no" />
+                <meta name="format-detection" content="email=no" />
+                <link type="text/css" rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <div id = "top_left_back_div" onclick="javascript:history.go(-1);">
+                <img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+            </div>
+            <!--<img onclick="javascript:history.go(-1);" class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />-->
+            <div id="title_name" style = "padding-top:10px;">
+                确认绑定
+            </div>
+        </div>
+        <div class="content">
+            <div id="card_setup_form">
+                <div id="div_bank_vcode">
+                    <div class="vcode_left">
+                        <input id="input_vcode" maxlength="4" value = "" placeholder="短信验证码" required>
+                    </div>
+                    <div class="vcode_right">
+                        <button id="btn_vcode" class="button">
+                            获取验证码
+                        </button>
+                    </div>
+                </div>
+            <div id='pwd_set_id'>
+                
+                <input id="id_card_no" class="margin-top-small" type="text" name="id_card_no" value="" placeholder="持卡人身份证号" maxlength="18"  readonly />
+                <input id="pay_pwd" type="password" name="pay_pwd" class="margin-top-small" value = "" placeholder="请输入支付密码" maxlength="20"/>
+                <input id="re_pay_pwd" type="password" name="re_pay_pwd" class="margin-top-small" value = "" placeholder="请再次输入支付密码" maxlength="20"/>
+                <div>
+                <button class="button normal margin-top-normal" class="margin-top-normal" id="submit_btn">下一步</button>
+            </div>
+        </div>
+        <div id="loading"></div>
+        <script src="js/jquery-2.1.1.min.js"></script>
+        <script src="js/spin.min.js"></script>
+        <script src="js/xml2json.js"></script>
+        <script src="js/httpRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/pay.js"></script>
+        <script>
+            $(function(){
+              bindCard.pwdPageInit();
+              
+              //如果是银行卡支付，就直接支付了
+              var bst = $.urlParam('bst');
+              if(bst === '1')
+              {
+               // $("#pwd_set_id").css("display","none");
+                  $("#pay_pwd").css("display","none");
+                  $("#re_pay_pwd").css("display","none");
+                  $("#title_name").text("银行卡支付");//CLPP
+                  $("#submit_btn").text("点击支付");//CLPP
+              }
+        
+              $("#submit_btn").on("click",function(){
+                        var bst = $.urlParam('bst');
+
+                        if(bst==='1')
+                        {
+                            if (payOrder.verifyCardPay()) {
+                                  
+                                payOrder.payWithBankCard();
+                            }
+                        }
+                        else
+                        {
+                            bindCard.setPayPwd();
+                        }
+                        
+                    });
+              });
+            </script>
+    </body>
+</html>

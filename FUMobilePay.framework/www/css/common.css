@@ -1,0 +1,99 @@
+header.sj_header{ position:relative; background:#2d6bac; height:4rem; text-align:center; overflow:hidden;}
+header>h2.sj_logo{ display:block; width:100%; height:4rem; line-height:4rem; color:white;}
+header>h2.sj_logo span{ width:60px; height:35px; display:inline-block; position:relative; top:12%;background:url(../images/logo.png) no-repeat center center; background-size:100%;}
+header>a.sj_back>img{ position:absolute; left:5%; top:28%; height:50%; }
+header>h2.sj_title{ width:100%; text-align:center; color:#fff; font-size:2rem; font-weight:normal; line-height:4rem; font-family:"microsoft yahei";}
+
+section{ font-family:"microsoft yahei";}
+.sj_concent{ font-family:"microsoft yahei"; padding-bottom:3em;}
+.sj_information ul{ background:#fff; border-top:1px solid #c9c7c5; margin-top:1em;}
+.sj_information ul li{ border-bottom:1px solid #c9c7c5; padding:0.5rem 0; line-height:1.2rem; color:#333; zoom:1; overflow:hidden; }
+.sj_information ul li.xyell{ background:#fff9f4;}
+.sj_information ul li p{ color:#666; padding:0.5em 5%; line-height:2;}
+.sj_information ul li label{ width:25%; height:3rem; line-height:3rem; float:left; box-sizing:border-box; text-align:right; padding-right:0.5em; }
+.sj_information ul li label img{ width:24px;}
+.sj_information ul li span{ float:left; width:75%; box-sizing:border-box; color:#756f7c; position:relative;line-height:3rem; }
+.sj_information ul li span em{ color:#cd0000;}
+.sj_information ul li span dfn{ font-style:normal; color:#ec604b;}
+.sj_information ul li span big,.sj_information ul li span bfn{ font-style:normal; font-size:1em; color:#2d6bac; margin-right:1em;}
+.sj_information ul li span i.del_i{ background:url(../images/error.png) no-repeat center center; background-size:80%; cursor:pointer; width:2rem; height:2rem; display:none; margin-left:0.5em; vertical-align:middle;}
+.sj_information ul li span i.del_i.scur{ display:inline-block;}
+.sj_information ul li input[type='number']{ -moz-appearance:textfield;}
+.sj_information ul li input[type='number']::-webkit-textfield-decoration-container{ background:#fff;}
+.sj_information ul li input[type='number']::-webkit-inner-spin-button { -webkit-appearance:none;}
+.sj_information ul li input[type='number']::-webkit-outer-spin-button { -webkit-appearance:none;}
+
+.sj_whiteinp{ padding:0 0.3em; height:3rem; box-sizing:border-box; width:80%;}
+.sj_yzmbtn{ box-sizing:border-box; border:1px solid #ec604b; border-radius:0.3em;  height:3rem; color:#ec604b; font-size:1em; margin-left:0.3em; cursor:pointer; width:86px;}
+.sj_sevxy{ margin:1.6em 5% 0 5%;}
+
+.sj_sevxy span{ margin-left:0.5em; color:#756f7c;}
+.sj_sevxy span a{ color:#1682fb;}
+
+.sj_botbtn{ padding:2em 10%;}
+.btn_oranbtn,.btn_graybtn{ height:3rem; background:#ec604b; color:#fff; font-size:1.67rem; width:100%; font-family:"microsoft yahei"; cursor:pointer;}
+.btn_graybtn{ background:#606060;}
+.checkbtn{background:url(../images/chkbtn.png) no-repeat center; background-size:100%; vertical-align:middle; width:18px; height:18px; display:inline-block; overflow:hidden; cursor:pointer;}
+.checkbtn.on{ background:url(../images/chkbtn_cur.png) no-repeat center; background-size:100%; vertical-align:middle; width:18px; height:18px; display:inline-block;}
+
+.paytext{ line-height:1.5; padding:1em 5%; color:#333;}
+.paytext p{ text-indent:2em;}
+
+.sj_fixedbox{ position:fixed; width:100%; height:100%; background:rgba(51,51,51,0.5); top:0; z-index:10;
+	display: -webkit-box;
+    display: -webkit-flex;      
+    display: -moz-box;
+    display: -moz-flex;      
+    display: -ms-flexbox;      
+    display: flex;      
+      /* 水平居中*/
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -ms-flex-pack:center;/* IE 10 */
+      
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;/* IE 11+,Firefox 22+,Chrome 29+,Opera 12.1*/
+      
+      /* 垂直居中 */
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -ms-flex-align:center;/* IE 10 */
+      
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+}
+.sj_midcon{ width:90%; background:#fff; padding:2em 2%; text-align:center;}
+.sj_midcon p{ padding:1.5em 10% 0 10%; color:#333; display:table; box-sizing:border-box; width:100%;}
+.sj_midcon p span{ display:table-cell; vertical-align:middle; text-align:left; line-height:1.8;}
+.sj_midcon p span:first-child{ text-align:right; width:20%;}
+.sj_midcon p img{ width:24px; margin-right:5px;}
+
+.sj_fixedbot{position:fixed; background:#fff; width:100%; bottom:0; border-top:1px solid #c9c7c5; height:3rem; line-height:3rem; text-align:center;}
+.sj_fixedbot a{ color:#666;}
+
+.sj_result{ margin:2em 0;}
+.sj_result p{ text-align:center; color:#333; font-size:2rem;}
+.sj_result p img{ margin-right:0.5em; width:36px;}
+.sj_result ul{ margin:2em auto; width:90%; border:1px solid #89dbbc; background:#f1fff5; box-sizing:border-box; padding:0.5em;}
+.sj_result ul li{ color:#756f7c; display:table; width:100%;}
+.sj_result ul li label,.sj_result ul li span{ display:table-cell; box-sizing:border-box; padding:0.5em 0; line-height:1.5;}
+.sj_result ul li label{ color:#333; width:30%; text-align:right; padding-right:0.5em;}
+.sj_result ul li span{ width:70%;}
+.sj_result ul li span em{ color:#cd0000;}
+
+.fail{ margin:2em auto; width:90%; border:1px solid #efcbbb; background:#fcefe9; box-sizing:border-box; padding:3em 0.5em; color:#666; line-height:1.5; text-align:center;}
+
+.cardlist ul li{ background-color:#fff; border-top:1px solid #cdcbc9; border-bottom:1px solid #cdcbc9; margin-top:10px; padding:0.5rem 15px; display:table; width:100%; box-sizing:border-box;}
+.cardlist ul li div{ display:table-cell; vertical-align:middle;}
+.cardlist ul li div.clogo{ width:13%; text-align:center; vertical-align:top;}
+.cardlist ul li div.clogo img{ display:inline-block; width:28px; height:28px; border-radius:50%; border:3px solid #fff;}
+.cardlist ul li div.info{ font-size:1.35rem; width:60%; line-height:1.8; color:#333;}
+.cardlist ul li div.info p:nth-child(2){ font-size:1rem;}
+.cardlist ul li div.card_btn{ width:27%; text-align:center;} 
+.cardlist ul li div.card_btn>a{ display:inline-block; height:24px; line-height:24px; color:white; padding:0 20px; margin:3px 0;}
+.cardlist ul li div.card_btn>a.org_sybtn{ background-color:#ec604b; border:1px solid #d3533d;}
+.cardlist ul li div.card_btn>a.grn_scbtn{ background-color:#2cb682; border:1px solid #18a36f;}
+
+.Usnewcard{ border:2px dotted #c9c9c9; background-color:white; display:block; width:90%; text-align:center; font-size:1.5rem; color:#666; border-radius:0.5rem; padding:1.5rem 0; margin: 50px auto 0;}

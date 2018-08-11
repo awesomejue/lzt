@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>设置银行卡</title>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0,user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="header">
+    <div id = "top_left_back_div" onclick="javascript:history.go(-1);">
+        <img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+    </div>
+    <!--<img onclick="javascript:history.go(-1);" class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />-->
+    <div style = "padding-top:10px;">
+        富友卡
+    </div>
+</div>
+<div class="content">
+    <div id="card_setup_form">
+        <input id="card_type" disabled="true" type="text" name="card_type"  maxlength="19"/>
+        <input id="card_no" disabled="true" class="margin-top-small" type="text" name="card_no" maxlength="19"/>
+        <button class="button normal margin-top-normal" id="submit_btn">下一步</button>
+    </div>
+</div>
+<div id="loading"></div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/xml2json.js"></script>
+<script src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/pay.js"></script>
+<script>
+    $(function(){
+      $("#card_type").val($.urlParam('cardNm'));
+      $("#card_no").val($.urlParam('cardNo'));
+      $("#bst").val($.urlParam('bst'));//CLPP
+      bindCard.bindCardPageInit();
+      $("#submit_btn").on("click",function(){
+                bindCard.bindFuCard();
+        });
+    });
+</script>
+</body>
+</html>

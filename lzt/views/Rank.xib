@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Rank">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYR-tI-IGA" customClass="RankScrollerView">
+                    <rect key="frame" x="37" y="133.5" width="300" height="400.5"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="老头" translatesAutoresizingMaskIntoConstraints="NO" id="6eh-cf-6n3">
+                    <rect key="frame" x="149" y="75.5" width="76" height="63"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rGm-BM-m3n" userLabel="line">
+                    <rect key="frame" x="186.5" y="534" width="1" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="A1r-yh-6K7"/>
+                        <constraint firstAttribute="height" constant="40" id="QiZ-bQ-qp0"/>
+                    </constraints>
+                </view>
+                <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="排行关闭" translatesAutoresizingMaskIntoConstraints="NO" id="h0H-y9-iXo">
+                    <rect key="frame" x="175.5" y="574" width="23" height="23"/>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30209225171232879" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="rGm-BM-m3n" firstAttribute="top" secondItem="vYR-tI-IGA" secondAttribute="bottom" id="5gC-9k-112"/>
+                <constraint firstItem="vYR-tI-IGA" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="AYl-jq-M5L"/>
+                <constraint firstItem="h0H-y9-iXo" firstAttribute="top" secondItem="rGm-BM-m3n" secondAttribute="bottom" id="Jtr-09-ydz"/>
+                <constraint firstItem="vYR-tI-IGA" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.6" id="S1s-8v-dq5"/>
+                <constraint firstItem="rGm-BM-m3n" firstAttribute="centerX" secondItem="vYR-tI-IGA" secondAttribute="centerX" id="Vxq-iD-HeE"/>
+                <constraint firstItem="6eh-cf-6n3" firstAttribute="centerX" secondItem="vYR-tI-IGA" secondAttribute="centerX" id="ZTL-5F-Srf"/>
+                <constraint firstItem="vYR-tI-IGA" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.8" id="Zda-jM-2MX"/>
+                <constraint firstItem="vYR-tI-IGA" firstAttribute="top" secondItem="6eh-cf-6n3" secondAttribute="bottom" constant="-5" id="eGN-Gm-nnQ"/>
+                <constraint firstItem="h0H-y9-iXo" firstAttribute="centerX" secondItem="vYR-tI-IGA" secondAttribute="centerX" id="keq-W4-LwJ"/>
+                <constraint firstItem="vYR-tI-IGA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="o1q-yQ-PKS"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="close" destination="h0H-y9-iXo" id="Iep-lQ-0Hp"/>
+                <outlet property="rankScrollView" destination="vYR-tI-IGA" id="iXb-dV-lhd"/>
+            </connections>
+            <point key="canvasLocation" x="-412" y="104"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="排行关闭" width="23" height="23"/>
+        <image name="老头" width="76" height="63"/>
+    </resources>
+</document>

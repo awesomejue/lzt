@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>富友快捷支付</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="header">
+            <div id = "top_left_back_div">
+                <img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+            </div>
+			<div style="display: inline;padding-top:10px;">
+				富友快捷支付
+			</div>
+			<div id="btn_add_card" name="btn_add_card" style="display: inline;float: right;margin-right: 10px;">
+				添加
+			</div>
+		</div>
+		<div align="center" style="margin-top: 40px;">
+			<div id="div_bank_list" class="bank_list">
+				{{#list}}
+				<div class='bank_list_item'>
+					<div class='bank_list_left'>
+						<span>{{bankname}} </span>
+						<br/>
+						<span id='card_no_{{cardno}}'>{{cardno}} </span>
+					</div>
+					<div class='bank_list_right'>
+						<br />
+						<input id='check_card_{{cardno}}' onchange='onBankSelected(this,{{cardno}} ,{{bankphone}})' class='checkbox_card' type='radio' />
+					</div>
+				</div>
+				{{/list}}
+			</div>
+
+			<div id="div_bank_vcode" style="margin-top: 40px;">
+				<div class="vcode_left">
+					<input maxlength="4" placeholder="短信验证码" required>
+				</div>
+				<div class="vcode_right">
+					<button id="btn_vcode" class="button">
+						获取验证码
+					</button>
+				</div>
+			</div>
+
+			<input style="margin-top: 40px;" id="password" type="password" placeholder="请输入支付密码" maxlength="32" required>
+
+			<button style="margin-top: 40px;" id="btn_pay" class="button normal">
+				提交
+			</button>
+
+		</div>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
+		<script type="text/javascript" src="js/mustache.js"></script>
+		<script type="text/javascript" src="js/xml2json.js"></script>
+		<script type="text/javascript" src="js/map.js"></script>
+		<script type="text/javascript" src="js/httpRequest.js"></script>
+		<script type="text/javascript" src="js/pay.js"></script>
+		<script id="tmpl_bank_list" type="x-tmpl-mustache">
+			<div id="div_bank_list" class="bank_list">
+				{{#list}}
+				<div class='bank_list_item'>
+					<div class='bank_list_left'>
+						<span>{{bankname}} </span>
+						<br/>
+						<span id='card_no_{{cardno}}'>{{cardno}} </span>
+					</div>
+					<div class='bank_list_right'>
+						<br />
+						<input id='check_card_{{cardno}}' onchange='onBankSelected(this,{{cardno}} ,{{bankphone}})' class='checkbox_card' type='radio' />
+					</div>
+				</div>
+				{{/list}}
+			</div>
+
+			<div id="div_bank_vcode" style="margin-top: 40px;">
+				<div class="vcode_left">
+					<input maxlength="4" placeholder="短信验证码" required>
+				</div>
+				<div class="vcode_right">
+					<button id="btn_vcode" class="button">
+						获取验证码
+					</button>
+				</div>
+			</div>
+
+			<input style="margin-top: 40px;" id="password" type="password" placeholder="请输入支付密码" maxlength="32" required>
+
+			<button style="margin-top: 40px;" id="btn_pay" class="button normal">
+				提交
+			</button>
+		</script>
+        <script src="js/httpRequest.js"></script>
+        <script type="text/javascript" src="js/common.js"></script>
+        <script type="text/javascript" src="js/pay.js"></script>
+	</body>
+
+</html>

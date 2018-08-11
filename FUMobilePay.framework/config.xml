@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.iosxc.cordova" version="0.0.1">
+    <preference name="BackupWebStorage" value="local" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="EnableViewportScale" value="false" />
+    <preference name="KeyboardDisplayRequiresUserAction" value="true" />
+    <preference name="SuppressesIncrementalRendering" value="false" />
+    <preference name="TopActivityIndicator" value="gray" />
+    <preference name="GapBetweenPages" value="0" />
+    <preference name="PageLength" value="0" />
+    <preference name="PaginationBreakingMode" value="page" />
+    <preference name="PaginationMode" value="unpaginated" />
+    <preference name="StatusBarOverlaysWebView" value="false" />
+    <preference name="StatusBarBackgroundColor" value="#252a2e" />
+    <preference name="StatusBarStyle" value="lightcontent" />
+    <feature name="FuApp">
+        <param name="ios-package" onload="true" value="FUCordovaPlugin" />
+    </feature>
+    <feature name="StatusBar">
+        <param name="ios-package" value="CDVStatusBar" onload="true" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="ios-package" value="InAppBrowser" onload="true" />
+    </feature>
+    <name>FuMgr</name>
+    <description>
+        FuMgr App Webview Engine
+    </description>
+    <author email="mhxdev@gmail.com" href="http://blog.iosxc.com">
+        Crazz Mong
+    </author>
+    <sdkversion value = "789655415461123612"/>
+    <content src="card_setup_debit.html" />
+    <access origin="*" />
+</widget>

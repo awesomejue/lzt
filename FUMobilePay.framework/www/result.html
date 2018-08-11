@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>支付结果</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body>
+		<div class="header">
+			<img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+			<div>
+				支付结果
+			</div>
+		</div>
+		<div align="center" style="margin-top: 40px;">
+			<div id="orderInfo" class="content">
+				<div align="center">
+					<h2>
+						支付成功
+					</h2>
+				</div>
+				<div class="left">
+					收款方：
+				</div>
+				<div class="right" id="div_mchntName">
+					&nbsp;
+				</div>
+				<div class="left">
+					商品名称：
+				</div>
+				<div class="right" id="div_goodName">
+					&nbsp;
+				</div>
+				<div class="left">
+					订单时间：
+				</div>
+				<div class="right" id="div_orderTime">
+					&nbsp;
+				</div>
+				<div class="left">
+					订单号：
+				</div>
+				<div class="right" id="div_orderNo">
+					&nbsp;
+				</div>
+				<div class="left">
+					订单金额：
+				</div>
+				<div class="right" id="div_orderAmt">
+					&nbsp;
+				</div>
+			</div>
+			<button id="btn_back_to_app" onclick="backToApp('0','')" class="button normal">
+				返回应用
+			</button>
+		</div>
+		<script src="js/jquery-2.1.1.min.js" type="text/javascript"></script>
+		<script src="js/pay.js" type="text/javascript"></script>
+	</body>
+
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>设置银行卡</title>
+    <meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0,user-scalable=no, width=device-width">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="email=no"/>
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="header">
+        <div id = "top_left_back_div" onclick="javascript:history.go(-1);">
+        
+            <img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+        </div>
+        <!--<img onclick="javascript:history.go(-1);" class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />-->
+        <div style = "padding-top:10px;">
+            填写银行卡
+        </div>
+    </div>
+    <div class="content">
+        <div id="card_setup_form">
+            <input id="card_name" type="text" name="card" placeholder="" maxlength="19" value="" readonly/>
+<!--            6226890015441909-->
+            <button class="button normal margin-top-normal" id="submit_btn">下一步</button>
+            
+        </div>
+        
+        <div style="text-align:left;padding-top:30px;font-size:16px;text-color:#2F4F4F;background-color:#FFFFFF;">&nbsp;&nbsp;提示：
+        </div>
+        
+        <div style = "padding:10px;text-color:#2F4F4F;padding-top:10px;letter-spacing:3px;background-color:#FFFFFF;font-size:13px;text-align:left;">
+            <ol>
+                <li>
+                    <span>支持卡类型:</span><span id = "MchntDesp1"></span>
+                </li>
+                <li >
+                    <span id="BankDbeitSupport" ></span><span id ="BankDbeit"></span><span id="BankCreditSupport" ></span><span  id ="BankCredit"></span>
+                </li>
+                <li>
+                    <span id = "Debit"></span><span id = "Credit"></span>
+                </li>
+                <li>
+                    客服电话:95138
+                </li>
+            </ol>
+        </div>
+    </div>
+    
+    
+    
+
+
+    <div id="loading"></div>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script src="js/spin.min.js"></script>
+<script src="js/xml2json.js"></script>
+<script src="js/httpRequest.js"></script>
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/pay.js"></script>
+<script>
+    $(function () {
+      //谁能告诉我这几个东东在哪，还赋值。。。
+       $("#mobileNo").val($.urlParam('mobileNo'));
+      $("#bst").val($.urlParam('bst'));
+      
+      var tempDesp=$.urlParam('MchntDesp').replace(/&gt;/g,">").replace(/&lt;/g,"<");
+      var tempDbeits=$.urlParam('Dbeits').replace(/&gt;/g,">").replace(/&lt;/g,"<");
+      var tempDbeitm=$.urlParam('Dbeitm').replace(/&gt;/g,">").replace(/&lt;/g,"<");
+      var tempCredits=$.urlParam('Credits').replace(/&gt;/g,">").replace(/&lt;/g,"<");
+      var tempCreditm=$.urlParam('Creditm').replace(/&gt;/g,">").replace(/&lt;/g,"<");
+      if(tempDesp == "借记卡")
+      {
+         $("#MchntDesp1").html(tempDesp);
+         $("#BankDbeitSupport").html("借记卡支持银行:");
+         $("#BankDbeit").html("工行、农行、中行、建行、中信、兴业、民生、广发、平安、邮储、光大、华夏");
+         $("#BankCreditSupport").html("");
+         $("#BankCredit").html("");
+         $("#Debit").html("借记卡：单笔限额"+yuan2Fen(tempDbeits)+"元,单月限额"+yuan2Fen(tempDbeitm)+"元");
+         $("#Credit").html("");
+      }else if(tempDesp == "信用卡")
+      {
+         $("#MchntDesp1").html(tempDesp);
+         $("#BankDbeitSupport").html("");
+         $("#BankDbeit").html("");
+         $("#BankCreditSupport").html("信用卡支持银行:");
+         $("#BankCredit").html("中行、建行、中信、兴业、浦发、广发、平安、光大、招行、华夏");
+         $("#Debit").html("");
+         $("#Credit").html("信用卡：单笔限额"+yuan2Fen(tempCredits)+"元,单月限额"+yuan2Fen(tempCreditm)+"元");
+      }else
+      {
+        $("#MchntDesp1").html("借记卡、信用卡");
+        $("#BankDbeitSupport").html("借记卡支持银行:");
+        $("#BankDbeit").html("工行、农行、中行、建行、中信、兴业、民生、广发、平安、邮储、光大、华夏");
+        $("#BankCreditSupport").html("<br>信用卡支持银行:");
+        $("#BankCredit").html("中行、建行、中信、兴业、浦发、广发、平安、光大、招行、华夏");
+        $("#Debit").html("借记卡:单笔限额"+yuan2Fen(tempDbeits)+"元,单月限额"+yuan2Fen(tempDbeitm)+"元");
+        $("#Credit").html("<br>信用卡:单笔限额"+yuan2Fen(tempCredits)+"元,单月限额"+yuan2Fen(tempCreditm)+"元");
+      }
+      
+      
+      $("#card_name").unbind();
+      $("#card_name").on("click",function(){ keyDown.inputClick('$("#card_name").val')});
+      
+        $("#submit_btn").on("click", function () {
+            bindCard.queryCard2();//chenadd4
+        });
+    });
+</script>
+</body>
+</html>

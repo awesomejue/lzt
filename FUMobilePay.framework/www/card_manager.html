@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>我的银行卡</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta http-equiv="Content-type" name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no, width=device-width">
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="format-detection" content="email=no" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	</head>
+
+	<body style="background-color:#FFFFFF;">
+		<div id="loading"></div>
+		<div id="div_body">
+		</div>
+		<script id="tmpl_bank_list" type="x-tmpl-mustache">
+			<div class="header">
+				<img class="back_btn" id="top_left_back_btn" alt="返回" src="images/back_holo_light.png" />
+				<span style="margin:0 auto;">{{title}}</span>
+				<span id="btn_add_card" style="position: absolute;right: 5%;">添加</span>
+			</div>
+			
+			<div id="div_nocard" style="margin-top: 40px;">
+				暂无银行卡
+			</div>
+			<div id="div_hascard">
+			<div id="div_bank_list" class="bank_list" style="margin-top: 40px;">
+				{{#list}}
+				<div class='bank_list_item' id="bank_list_item">
+					<div class='bank_list_left'>
+						<span>{{bankName}} </span> {{cardNm}}
+						<input class="card_no" value="{{cardNo}}" hidden/>
+						<br/>
+						<span style="line-height: 25px;" id='card_no_{{cardNo}}'>{{cardNo}} </span>
+					</div>
+					<div class='bank_list_right'>
+						<button class="div_delete" hidden ="">删除< button>
+						<input id='check_card_{{cardNo}}' onchange='payOrder.onBankSelected(this,{{cardNo}} ,{{bankPhone}})' class='checkbox_card' type='radio' />
+					</div>
+				</div>
+				{{/list}}
+			</div>
+
+			<button style="margin-top: 20px;" id="btn_setdefault" class="button normal">
+				设为默认
+			</button>
+			</div>
+		</script>
+		<script type="text/javascript" src="js/jquery-2.1.1.min.js" ></script>
+		<script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+		<script type="text/javascript" src="js/localData.js"></script>
+		<script type="text/javascript" src="js/mustache.js"></script>
+		<script type="text/javascript" src="js/spin.min.js"></script>
+		<script type="text/javascript" src="js/httpRequest.js"></script>
+		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/pay.js"></script>
+	</body>
+
+</html>
