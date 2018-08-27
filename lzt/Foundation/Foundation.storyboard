@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PingFang.ttc">
-            <string>PingFangSC-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Foundation Controller-->
         <scene sceneID="maO-9V-yxl">
@@ -36,14 +31,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B4Z-oA-HaB">
                                         <rect key="frame" x="300" y="0.0" width="75" height="64"/>
-                                        <color key="backgroundColor" red="0.91623598337173462" green="0.19834738969802856" blue="0.13711804151535034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="gXj-w1-gWe" appends="YES" id="uJZ-sw-lEu"/>
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="B4Z-oA-HaB" secondAttribute="trailing" id="1a9-R2-bm3"/>
                                     <constraint firstAttribute="height" constant="64" id="E2a-4E-91i"/>
@@ -429,14 +424,14 @@
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NQK-91-7vY">
                                         <rect key="frame" x="300" y="0.0" width="75" height="64"/>
-                                        <color key="backgroundColor" red="0.91623598340000001" green="0.19834738969999999" blue="0.13711804150000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <gestureRecognizers/>
                                         <connections>
                                             <outletCollection property="gestureRecognizers" destination="Dpr-ip-t4X" appends="YES" id="zdg-43-kqJ"/>
                                         </connections>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="NQK-91-7vY" firstAttribute="top" secondItem="yeh-KC-EFa" secondAttribute="top" id="3i7-uO-aCt"/>
                                     <constraint firstItem="NQK-91-7vY" firstAttribute="width" secondItem="yeh-KC-EFa" secondAttribute="width" multiplier="0.2" id="FWl-RT-g7e"/>
@@ -566,7 +561,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="fjL-SO-GIp" secondAttribute="bottom" constant="7" id="6c8-Fw-8sw"/>
                                     <constraint firstItem="sqp-Sd-YZY" firstAttribute="height" secondItem="2WM-fT-B5z" secondAttribute="height" id="LR5-b2-s0A"/>
@@ -642,7 +637,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="DUP-Mg-OYI"/>
                                     <constraint firstItem="W5s-6B-dqg" firstAttribute="centerX" secondItem="Zto-ft-4iL" secondAttribute="centerX" id="IoD-lP-9Wr"/>
@@ -988,7 +983,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="i6b-AD-tVF" firstAttribute="centerY" secondItem="2mE-7T-KxC" secondAttribute="centerY" id="2lg-KY-MzU"/>
                                     <constraint firstItem="i6b-AD-tVF" firstAttribute="leading" secondItem="rvu-9O-5Mn" secondAttribute="leading" id="6jw-Gf-SvR"/>
@@ -1052,7 +1047,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="7ua-La-zA4"/>
                                     <constraint firstItem="fNr-2y-WiS" firstAttribute="centerY" secondItem="2Ep-hv-4oQ" secondAttribute="centerY" id="9Yv-4w-1Qk"/>
@@ -1116,7 +1111,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="qOS-Dk-VFf" secondAttribute="bottom" constant="7" id="88s-FU-Irr"/>
                                     <constraint firstItem="4bD-ao-zTz" firstAttribute="height" secondItem="bEN-sS-cxx" secondAttribute="height" id="gFq-RS-0s6"/>

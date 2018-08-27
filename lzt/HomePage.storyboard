@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="PingFang.ttc">
-            <string>PingFangSC-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Banner View Controller-->
         <scene sceneID="VUk-RB-nMy">
@@ -46,7 +41,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="Lmf-jP-rCb" firstAttribute="height" secondItem="JjC-ba-OqK" secondAttribute="height" id="2Uq-5b-LRs"/>
                                     <constraint firstItem="Lmf-jP-rCb" firstAttribute="leading" secondItem="JjC-ba-OqK" secondAttribute="leading" id="LK2-sZ-WbF"/>
@@ -165,7 +160,7 @@
                                                     </label>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXD-7R-rzo">
                                                         <rect key="frame" x="94.5" y="252.5" width="187.5" height="44"/>
-                                                        <color key="backgroundColor" red="0.81568627450980391" green="0.17254901960784313" blue="0.14901960784313725" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                        <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="wsg-6U-GzY"/>
                                                         </constraints>
@@ -617,7 +612,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="qWb-jL-PIN" firstAttribute="centerX" secondItem="kVQ-pj-uSB" secondAttribute="centerX" id="2yQ-gS-HqO"/>
                                     <constraint firstAttribute="bottom" secondItem="qWb-jL-PIN" secondAttribute="bottom" constant="7" id="FH8-pY-EYF"/>
@@ -1081,7 +1076,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="zjz-Ml-RcZ" firstAttribute="leading" secondItem="F9G-C7-fPF" secondAttribute="leading" id="538-Gs-w2W"/>
                                     <constraint firstItem="zjz-Ml-RcZ" firstAttribute="height" secondItem="F9G-C7-fPF" secondAttribute="height" id="V9f-9e-qgX"/>
@@ -1146,7 +1141,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.2470588235" green="0.46666666670000001" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="JA2-Ww-msx" secondAttribute="bottom" constant="7" id="GMC-H1-yCm"/>
                                     <constraint firstItem="T1Z-mB-zho" firstAttribute="centerY" secondItem="JA2-Ww-msx" secondAttribute="centerY" id="Ogx-Nm-T7p"/>

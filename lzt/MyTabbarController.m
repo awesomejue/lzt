@@ -29,6 +29,8 @@
     [self setupSubviews];
     self.selectedIndex = 0;
     self.tabBar.barTintColor = [UIColor whiteColor];
+	self.tabBar.tintColor = UIColorFromRGB(0x3f77f1);
+	self.tabBar.unselectedItemTintColor = UIColorFromRGB(0x7e7e7e);
     self.tabBar.backgroundColor = [UIColor whiteColor];
    // self.title = @"首页";
     //网络监听
@@ -44,42 +46,48 @@
 }
 - (void)setupSubviews {
     UIStoryboard *s = [UIStoryboard storyboardWithName:@"HomePage" bundle:nil];
+	
+	UIColor *tintColor = UIColorFromRGB(0x3f77f1);
     
    _homePage = [s instantiateViewControllerWithIdentifier:@"HomePageViewController"];
     _homePage.tabBarItem.tag = 0;
-    _homePage.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"首页" image:[UIImage imageNamed:@"主页.png"]selectedImage:[self originalImageName:@"主页2.png"]];
-     [_homePage.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+	UIImage *zhuye = [UIImage imageNamed:@"主页"];
+    _homePage.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"首页" image:zhuye selectedImage:zhuye];
+     [_homePage.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:tintColor} forState:UIControlStateSelected];
     
     s = [UIStoryboard storyboardWithName:@"Project" bundle:nil];
     _project = [s instantiateViewControllerWithIdentifier:@"ProjectController"];
     _project.tabBarItem.tag = 1;
-    _project.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"投资" image:[UIImage imageNamed:@"投资.png"]selectedImage:[self originalImageName:@"投资2.png"]];
-     [_project.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+	UIImage *chuxuguan = [UIImage imageNamed:@"储蓄罐"];
+    _project.tabBarItem = [[UITabBarItem alloc]initWithTitle:@"投资" image:chuxuguan selectedImage:chuxuguan];
+     [_project.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:tintColor} forState:UIControlStateSelected];
     
 //    s = [UIStoryboard storyboardWithName:@"Foundation" bundle:nil];
 //    _found = [s instantiateViewControllerWithIdentifier:@"FoundationController"];
 //    _found.tabBarItem.tag = 2;
 //    _found.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"发现.png"]selectedImage:[self originalImageName:@"发现2.png"]];
-//     [_found.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+//     [_found.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:tintColor} forState:UIControlStateSelected];
     
     s = [UIStoryboard storyboardWithName:@"Foundation" bundle:nil];
     _nfound = [s instantiateViewControllerWithIdentifier:@"NewFoundationViewController"];
     _nfound.tabBarItem.tag = 2;
-    _nfound.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"发现" image:[UIImage imageNamed:@"发现.png"]selectedImage:[self originalImageName:@"发现2.png"]];
-    [_nfound.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+	UIImage *faxian = [UIImage imageNamed:@"发现"];
+    _nfound.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"发现" image:faxian selectedImage:faxian];
+	
+    [_nfound.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:tintColor} forState:UIControlStateSelected];
     
     s = [UIStoryboard storyboardWithName:@"MyInfo" bundle:nil];
     _myinfo = [s instantiateViewControllerWithIdentifier:@"MyInfoViewController"];
     _myinfo.tabBarItem.tag = 3;
-    _myinfo.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"我的" image:[UIImage imageNamed:@"个人中心.png"]selectedImage:[self originalImageName:@"个人中心2.png"]];
-     [_myinfo.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor redColor]} forState:UIControlStateSelected];
+	UIImage *wode = [UIImage imageNamed:@"个人中心"];
+    _myinfo.tabBarItem= [[UITabBarItem alloc]initWithTitle:@"我的" image:wode selectedImage:wode];
+     [_myinfo.tabBarItem setTitleTextAttributes:@{NSForegroundColorAttributeName:tintColor} forState:UIControlStateSelected];
     //NavigationController *nav = [[NavigationController alloc]initWithRootViewController:_myinfo];
     
     self.viewControllers =@[_homePage,_project,_nfound,_myinfo];
 }
 - (UIImage*)originalImageName:(NSString*)imageName
 {
-    
     UIImage *img = [UIImage imageNamed:imageName];
     
     return [img imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
